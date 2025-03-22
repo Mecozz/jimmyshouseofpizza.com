@@ -9,14 +9,15 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background: url('JimmysHouseOfPizzaBox.png') no-repeat center center fixed;
-            background-size: cover;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             color: #fff;
+            background: url('JimmysHouseOfPizzaBox.png') no-repeat center center fixed;
+            background-size: cover;
+            background-position: center;
         }
         button {
             padding: 15px 30px;
@@ -43,6 +44,18 @@
             max-width: 90%;
             max-height: 90%;
             border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            body, html {
+                background-attachment: scroll;
+                background-size: contain;
+            }
+
+            button {
+                font-size: 1.2em;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
