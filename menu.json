@@ -79,9 +79,61 @@
         {"image": "steakgrinder9.png", "name": "", "large_price": "", "regular_price": ""}
       ]
     },
-    {"name": "Dinners", "items": [{"image": "", "name": "", "price": ""}]},
-    {"name": "Italian Dishes", "items": [{"image": "", "name": "", "price": ""}]},
-    {"name": "Salads", "items": [{"image": "", "name": "", "price": ""}]},
-    {"name": "Side Orders", "items": [{"image": "", "name": "", "price": "", "small_price": ""}]}
+    {
+  "categories": [
+    {
+      "name": "Dinners",
+      "items": [
+        {"image": "dinner1.png", "name": "", "price": ""},
+        {"image": "dinner2.png", "name": "", "price": ""},
+        {"image": "dinner3.png", "name": "", "price": ""},
+        {"image": "dinner4.png", "name": "", "price": ""},
+        {"image": "dinner5.png", "name": "", "price": ""}
+      ]
+    },
+    {
+      "name": "Italian Dishes",
+      "items": [
+        {"image": "italian1.png", "name": "", "price": ""},
+        {"image": "italian2.png", "name": "", "price": ""},
+        {"image": "italian3.png", "name": "", "price": ""},
+        {"image": "italian4.png", "name": "", "price": ""},
+        {"image": "italian5.png", "name": "", "price": ""}
+      ]
+    },
+    {
+      "name": "Salads",
+      "items": [
+        {"image": "salad1.png", "name": "", "price": ""},
+        {"image": "salad2.png", "name": "", "price": ""},
+        {"image": "salad3.png", "name": "", "price": ""},
+        {"image": "salad4.png", "name": "", "price": ""},
+        {"image": "salad5.png", "name": "", "price": ""},
+        {"image": "salad6.png", "name": "", "price": ""},
+        {"image": "salad7.png", "name": "", "price": ""},
+        {"image": "salad8.png", "name": "", "price": ""},
+        {"image": "salad9.png", "name": "", "price": ""},
+        {"image": "salad10.png", "name": "", "price": ""}
+      ]
+    },
+    {
+      "name": "Side Orders",
+      "items": [
+        {"image": "side1.png", "name": "", "price": ""},
+        {"image": "side2.png", "name": "", "price": "", "small_price": ""},
+        {"image": "side3.png", "name": "", "price": "", "small_price": ""},
+        {"image": "side4.png", "name": "", "price": "", "small_price": ""},
+        {"image": "side5.png", "name": "", "price": "", "small_price": ""},
+        {"image": "side6.png", "name": "", "price": ""},
+        {"image": "side7.png", "name": "", "price": ""},
+        {"image": "side8.png", "name": "", "price": ""},
+        {"image": "side9.png", "name": "", "price": ""},
+        {"image": "side10.png", "name": "", "price": ""},
+        {"image": "side11.png", "name": "", "price": ""},
+        {"image": "side12.png", "name": "", "price": ""},
+        {"image": "side13.png", "name": "", "price": ""},
+        {"image": "side14.png", "name": "", "price": ""}
+      ]
+    }
   ]
 }
