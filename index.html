@@ -88,6 +88,7 @@
     <button onclick="loadCategory('Pizzas')">Pizzas 🍕</button>
     <button onclick="loadCategory('Calzones')">Calzones 🥟</button>
     <button onclick="loadCategory('Hot or Cold Grinders')">Hot or Cold Grinders 🥪</button>
+    <button onclick="loadCategory('Steak Grinders')">Steak Grinders 🥩</button>
     <button onclick="loadCategory('Italian Dishes')">Italian Dishes 🍝</button>
     <button onclick="loadCategory('Dinners')">Dinners 🍽️</button>
     <button onclick="loadCategory('Salads')">Salads 🥗</button>
@@ -128,7 +129,13 @@ function loadCategory(categoryName) {
 
             let price = document.createElement('div');
             price.className = 'price';
-            price.textContent = item.price ? `$${item.price}` : '';
+            if (item.large_price && item.regular_price) {
+                price.textContent = `Large: $${item.large_price} | Regular: $${item.regular_price}`;
+            } else if(item.small_price && item.price){
+                price.textContent = `Small: $${item.small_price} | Regular: $${item.price}`;
+            } else {
+                price.textContent = item.price ? `$${item.price}` : '';
+            }
 
             imageItem.appendChild(img);
             imageItem.appendChild(name);
