@@ -49,11 +49,10 @@
             transition: transform 0.3s ease;
             cursor: pointer;
         }
-        .image-row img:hover {
+        .image-row img.zoomed {
             transform: scale(1.7);
             z-index: 20;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
-
         }
         #menuImage {
             display: none;
@@ -115,11 +114,22 @@ fetch('menu.json')
             category.images.forEach(imgSrc => {
                 let img = document.createElement('img');
                 img.src = imgSrc;
+
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    document.querySelectorAll('.image-row img').forEach(i => i.classList.remove('zoomed'));
+                    img.classList.add('zoomed');
+                });
+
                 imageRow.appendChild(img);
             });
 
             categoryDiv.appendChild(imageRow);
             menu.appendChild(categoryDiv);
+        });
+
+        document.body.addEventListener('click', function() {
+            document.querySelectorAll('.image-row img').forEach(i => i.classList.remove('zoomed'));
         });
     });
 
