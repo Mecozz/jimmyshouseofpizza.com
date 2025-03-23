@@ -1,43 +1,53 @@
 {
   "categories": [
     {
-      "name": "PIZZA",
+      "name": "Pizza",
       "images": [
-        "Pizza1.png",
-        "Pizza2.png",
-        "Pizza3.png",
-        "Pizza4.png",
-        "Pizza5.png"
+        "pizza1.png", "pizza2.png", "pizza3.png", "pizza4.png", "pizza5.png",
+        "pizza6.png", "pizza7.png", "pizza8.png", "pizza9.png", "pizza10.png",
+        "pizza11.png", "pizza12.png", "pizza13.png", "pizza14.png", "pizza15.png",
+        "pizza16.png", "pizza17.png", "pizza18.png", "pizza19.png", "pizza20.png",
+        "pizza21.png", "pizza22.png", "pizza23.png", "pizza24.png", "pizza25.png"
       ]
     },
     {
-      "name": "CALZONES",
+      "name": "Calzones",
       "images": [
-        "Calzone1.png",
-        "Calzone2.png",
-        "Calzone3.png",
-        "Calzone4.png",
-        "Calzone6.png"
+        "calzone1.png", "calzone2.png", "calzone3.png", "calzone4.png", "calzone5.png",
+        "calzone6.png", "calzone7.png", "calzone8.png", "calzone9.png", "calzone10.png",
+        "calzone11.png", "calzone12.png", "calzone13.png", "calzone14.png", "calzone15.png",
+        "calzone16.png", "calzone17.png", "calzone18.png", "calzone19.png", "calzone20.png",
+        "calzone21.png", "calzone22.png", "calzone23.png", "calzone24.png", "calzone25.png"
       ]
     },
     {
-      "name": "SUBS",
+      "name": "Subs",
       "images": [
-        "Sub1.png",
-        "Sub2.png",
-        "Sub3.png",
-        "Sub4.png",
-        "Sub5.png"
+        "sub1.png", "sub2.png", "sub3.png", "sub4.png", "sub5.png",
+        "sub6.png", "sub7.png", "sub8.png", "sub9.png", "sub10.png",
+        "sub11.png", "sub12.png", "sub13.png", "sub14.png", "sub15.png",
+        "sub16.png", "sub17.png", "sub18.png", "sub19.png", "sub20.png",
+        "sub21.png", "sub22.png", "sub23.png", "sub24.png", "sub25.png"
       ]
     },
     {
-      "name": "SIDES",
+      "name": "Sides",
       "images": [
-        "Side1.png",
-        "Side2.png",
-        "Side3.png",
-        "Side4.png",
-        "Side5.png"
+        "side1.png", "side2.png", "side3.png", "side4.png", "side5.png",
+        "side6.png", "side7.png", "side8.png", "side9.png", "side10.png",
+        "side11.png", "side12.png", "side13.png", "side14.png", "side15.png",
+        "side16.png", "side17.png", "side18.png", "side19.png", "side20.png",
+        "side21.png", "side22.png", "side23.png", "side24.png", "side25.png"
+      ]
+    },
+    {
+      "name": "Salads",
+      "images": [
+        "salad1.png", "salad2.png", "salad3.png", "salad4.png", "salad5.png",
+        "salad6.png", "salad7.png", "salad8.png", "salad9.png", "salad10.png",
+        "salad11.png", "salad12.png", "salad13.png", "salad14.png", "salad15.png",
+        "salad16.png", "salad17.png", "salad18.png", "salad19.png", "salad20.png",
+        "salad21.png", "salad22.png", "salad23.png", "salad24.png", "salad25.png"
       ]
     }
   ]
