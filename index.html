@@ -7,22 +7,25 @@
     <style>
         body, html {
             margin: 0;
-            padding: 20px;
+            padding: 0;
             font-family: Arial, sans-serif;
             background-color: #000;
             color: #fff;
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
         }
         .button-container {
             display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         button, .call-btn {
-            padding: 10px 20px;
-            font-size: 1.2em;
+            padding: 8px 15px;
+            font-size: 1.1em;
             cursor: pointer;
             border: none;
             border-radius: 8px;
@@ -31,115 +34,88 @@
             text-decoration: none;
         }
         .category {
-            width: 100%;
             text-align: center;
-            margin: 40px 0;
+            margin-top: 20px;
         }
-        .image-row {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+            width: 90%;
+            max-width: 1200px;
+            margin-bottom: 50px;
         }
-        .image-row img {
-            width: 180px;
-            height: 120px;
+        .image-grid img {
+            width: 100%;
+            height: 100px;
             object-fit: cover;
             border-radius: 8px;
+            cursor: pointer;
             transition: transform 0.3s ease;
-            cursor: pointer;
         }
-        .image-row img.zoomed {
-            transform: scale(1.9);
-            z-index: 50;
+        .image-grid img:hover {
+            transform: scale(1.5);
+            z-index: 10;
             position: relative;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.8);
         }
-        #menuImage {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
+        .placeholder {
             width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        #menuImage img {
-            max-width: 90%;
-            max-height: 80%;
+            height: 100px;
+            background-color: #111;
             border-radius: 8px;
         }
         @media (max-width: 768px) {
-            .image-row img {
-                width: 140px;
-                height: 100px;
-            }
             button, .call-btn {
                 font-size: 1em;
-                padding: 8px 15px;
+                padding: 8px 12px;
             }
         }
     </style>
 </head>
 <body>
-
 <div class="button-container">
-    <button onclick="showMenu()">View Menu 🍕</button>
+    <button onclick="loadCategory('Pizza')">Pizza 🍕</button>
+    <button onclick="loadCategory('Calzones')">Calzones 🥟</button>
+    <button onclick="loadCategory('Subs')">Subs 🥪</button>
+    <button onclick="loadCategory('Sides')">Sides 🍟</button>
+    <button onclick="loadCategory('Salads')">Salads 🥗</button>
     <a class="call-btn" href="tel:6036693310">Call Now 📞</a>
 </div>
 
-<div id="menu"></div>
-
-<div id="menuImage" onclick="hideMenu()">
-    <img src="Screenshot 2025-03-22 191817.png" alt="Jimmy's House of Pizza Menu">
-    <a class="call-btn" href="tel:6036693310">Call Now 📞</a>
-</div>
+<div id="menu" class="category"></div>
 
 <script>
+let menuData;
 fetch('menu.json')
     .then(response => response.json())
     .then(data => {
-        const menu = document.getElementById('menu');
-        data.categories.forEach(category => {
-            let categoryDiv = document.createElement('div');
-            categoryDiv.className = 'category';
-            categoryDiv.innerHTML = `<h2>${category.name}</h2>`;
-
-            let imageRow = document.createElement('div');
-            imageRow.className = 'image-row';
-
-            category.images.forEach(imgSrc => {
-                let img = document.createElement('img');
-                img.src = imgSrc;
-
-                img.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    document.querySelectorAll('.image-row img').forEach(i => i.classList.remove('zoomed'));
-                    img.classList.add('zoomed');
-                });
-
-                imageRow.appendChild(img);
-            });
-
-            categoryDiv.appendChild(imageRow);
-            menu.appendChild(categoryDiv);
-        });
-
-        document.body.addEventListener('click', function() {
-            document.querySelectorAll('.image-row img').forEach(i => i.classList.remove('zoomed'));
-        });
+        menuData = data;
+        loadCategory('Pizza'); // default category
     });
 
-function showMenu() {
-    document.getElementById('menuImage').style.display = 'flex';
-}
+function loadCategory(categoryName) {
+    const category = menuData.categories.find(cat => cat.name.toUpperCase() === categoryName.toUpperCase());
+    const menu = document.getElementById('menu');
+    menu.innerHTML = `<h2>${category.name}</h2>`;
 
-function hideMenu() {
-    document.getElementById('menuImage').style.display = 'none';
+    let imageGrid = document.createElement('div');
+    imageGrid.className = 'image-grid';
+
+    for(let i = 0; i < 25; i++){
+        let imgSrc = category.images[i];
+        if(imgSrc){
+            let img = document.createElement('img');
+            img.src = imgSrc;
+            imageGrid.appendChild(img);
+        } else {
+            let placeholder = document.createElement('div');
+            placeholder.className = 'placeholder';
+            imageGrid.appendChild(placeholder);
+        }
+    }
+
+    menu.appendChild(imageGrid);
 }
 </script>
 
