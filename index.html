@@ -16,6 +16,12 @@
             align-items: center;
             width: 100%;
         }
+        .header {
+            color: red;
+            font-size: 2em;
+            margin: 20px 0;
+            text-align: center;
+        }
         .button-container {
             display: flex;
             gap: 10px;
@@ -59,12 +65,6 @@
             position: relative;
             box-shadow: 0 8px 15px rgba(0,0,0,0.8);
         }
-        .placeholder {
-            width: 100%;
-            height: 100px;
-            background-color: #111;
-            border-radius: 8px;
-        }
         @media (max-width: 768px) {
             button, .call-btn {
                 font-size: 1em;
@@ -74,12 +74,15 @@
     </style>
 </head>
 <body>
+<div class="header">Jimmy's House of Pizza</div>
 <div class="button-container">
-    <button onclick="loadCategory('Pizza')">Pizza 🍕</button>
+    <button onclick="loadCategory('Pizzas')">Pizzas 🍕</button>
     <button onclick="loadCategory('Calzones')">Calzones 🥟</button>
-    <button onclick="loadCategory('Subs')">Subs 🥪</button>
-    <button onclick="loadCategory('Sides')">Sides 🍟</button>
+    <button onclick="loadCategory('Hot or Cold Grinders')">Hot or Cold Grinders 🥪</button>
+    <button onclick="loadCategory('Italian Dishes')">Italian Dishes 🍝</button>
+    <button onclick="loadCategory('Dinners')">Dinners 🍽️</button>
     <button onclick="loadCategory('Salads')">Salads 🥗</button>
+    <button onclick="loadCategory('Side Orders')">Side Orders 🍟</button>
     <a class="call-btn" href="tel:6036693310">Call Now 📞</a>
 </div>
 
@@ -91,7 +94,7 @@ fetch('menu.json')
     .then(response => response.json())
     .then(data => {
         menuData = data;
-        loadCategory('Pizza'); // default category
+        loadCategory('Pizzas'); // default category
     });
 
 function loadCategory(categoryName) {
@@ -102,18 +105,13 @@ function loadCategory(categoryName) {
     let imageGrid = document.createElement('div');
     imageGrid.className = 'image-grid';
 
-    for(let i = 0; i < 25; i++){
-        let imgSrc = category.images[i];
+    category.images.forEach(imgSrc => {
         if(imgSrc){
             let img = document.createElement('img');
             img.src = imgSrc;
             imageGrid.appendChild(img);
-        } else {
-            let placeholder = document.createElement('div');
-            placeholder.className = 'placeholder';
-            imageGrid.appendChild(placeholder);
         }
-    }
+    });
 
     menu.appendChild(imageGrid);
 }
