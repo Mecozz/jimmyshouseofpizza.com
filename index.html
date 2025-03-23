@@ -45,11 +45,16 @@
         }
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
             width: 90%;
             max-width: 1200px;
             margin-bottom: 50px;
+        }
+        .image-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .image-grid img {
             width: 100%;
@@ -60,10 +65,14 @@
             transition: transform 0.3s ease;
         }
         .image-grid img:hover {
-            transform: scale(1.5);
+            transform: scale(1.4);
             z-index: 10;
             position: relative;
             box-shadow: 0 8px 15px rgba(0,0,0,0.8);
+        }
+        .image-item .name, .image-item .price {
+            margin-top: 5px;
+            font-size: 0.9em;
         }
         @media (max-width: 768px) {
             button, .call-btn {
@@ -94,7 +103,7 @@ fetch('menu.json')
     .then(response => response.json())
     .then(data => {
         menuData = data;
-        loadCategory('Pizzas'); // default category
+        loadCategory('Pizzas');
     });
 
 function loadCategory(categoryName) {
@@ -105,11 +114,27 @@ function loadCategory(categoryName) {
     let imageGrid = document.createElement('div');
     imageGrid.className = 'image-grid';
 
-    category.images.forEach(imgSrc => {
-        if(imgSrc){
+    category.items.forEach(item => {
+        if(item.image){
+            let imageItem = document.createElement('div');
+            imageItem.className = 'image-item';
+
             let img = document.createElement('img');
-            img.src = imgSrc;
-            imageGrid.appendChild(img);
+            img.src = item.image;
+
+            let name = document.createElement('div');
+            name.className = 'name';
+            name.textContent = item.name || '';
+
+            let price = document.createElement('div');
+            price.className = 'price';
+            price.textContent = item.price ? `$${item.price}` : '';
+
+            imageItem.appendChild(img);
+            imageItem.appendChild(name);
+            imageItem.appendChild(price);
+
+            imageGrid.appendChild(imageItem);
         }
     });
 
