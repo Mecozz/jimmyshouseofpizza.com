@@ -1,54 +1,87 @@
 {
   "categories": [
     {
-      "name": "Pizza",
-      "images": [
-        "pizza1.png", "pizza2.png", "pizza3.png", "pizza4.png", "pizza5.png",
-        "pizza6.png", "pizza7.png", "pizza8.png", "pizza9.png", "pizza10.png",
-        "pizza11.png", "pizza12.png", "pizza13.png", "pizza14.png", "pizza15.png",
-        "pizza16.png", "pizza17.png", "pizza18.png", "pizza19.png", "pizza20.png",
-        "pizza21.png", "pizza22.png", "pizza23.png", "pizza24.png", "pizza25.png"
+      "name": "Pizzas",
+      "items": [
+        {"image": "pizza1.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza2.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza3.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza4.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza5.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza6.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza7.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza8.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza9.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza10.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza11.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza12.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza13.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza14.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza15.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza16.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza17.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza18.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza19.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "pizza20.png", "name": "", "large_price": "", "regular_price": ""}
       ]
     },
     {
       "name": "Calzones",
-      "images": [
-        "calzone1.png", "calzone2.png", "calzone3.png", "calzone4.png", "calzone5.png",
-        "calzone6.png", "calzone7.png", "calzone8.png", "calzone9.png", "calzone10.png",
-        "calzone11.png", "calzone12.png", "calzone13.png", "calzone14.png", "calzone15.png",
-        "calzone16.png", "calzone17.png", "calzone18.png", "calzone19.png", "calzone20.png",
-        "calzone21.png", "calzone22.png", "calzone23.png", "calzone24.png", "calzone25.png"
+      "items": [
+        {"image": "calzone1.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "calzone2.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "calzone3.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "calzone4.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "calzone5.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "calzone6.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "calzone7.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "calzone8.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "calzone9.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "calzone10.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "calzone11.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "calzone12.png", "name": "", "large_price": "", "regular_price": ""}
       ]
     },
     {
-      "name": "Subs",
-      "images": [
-        "sub1.png", "sub2.png", "sub3.png", "sub4.png", "sub5.png",
-        "sub6.png", "sub7.png", "sub8.png", "sub9.png", "sub10.png",
-        "sub11.png", "sub12.png", "sub13.png", "sub14.png", "sub15.png",
-        "sub16.png", "sub17.png", "sub18.png", "sub19.png", "sub20.png",
-        "sub21.png", "sub22.png", "sub23.png", "sub24.png", "sub25.png"
+      "name": "Hot or Cold Grinders",
+      "items": [
+        {"image": "grinder1.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder2.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder3.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder4.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder5.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder6.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder7.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder8.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder9.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder10.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder11.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder12.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder13.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder14.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder15.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder16.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder17.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "grinder18.png", "name": "", "large_price": "", "regular_price": ""}
       ]
     },
     {
-      "name": "Sides",
-      "images": [
-        "side1.png", "side2.png", "side3.png", "side4.png", "side5.png",
-        "side6.png", "side7.png", "side8.png", "side9.png", "side10.png",
-        "side11.png", "side12.png", "side13.png", "side14.png", "side15.png",
-        "side16.png", "side17.png", "side18.png", "side19.png", "side20.png",
-        "side21.png", "side22.png", "side23.png", "side24.png", "side25.png"
+      "name": "Steak Grinders",
+      "items": [
+        {"image": "steakgrinder1.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "steakgrinder2.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "steakgrinder3.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "steakgrinder4.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "steakgrinder5.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "steakgrinder6.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "steakgrinder7.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "steakgrinder8.png", "name": "", "large_price": "", "regular_price": ""},
+        {"image": "steakgrinder9.png", "name": "", "large_price": "", "regular_price": ""}
       ]
     },
-    {
-      "name": "Salads",
-      "images": [
-        "salad1.png", "salad2.png", "salad3.png", "salad4.png", "salad5.png",
-        "salad6.png", "salad7.png", "salad8.png", "salad9.png", "salad10.png",
-        "salad11.png", "salad12.png", "salad13.png", "salad14.png", "salad15.png",
-        "salad16.png", "salad17.png", "salad18.png", "salad19.png", "salad20.png",
-        "salad21.png", "salad22.png", "salad23.png", "salad24.png", "salad25.png"
-      ]
-    }
+    {"name": "Dinners", "items": [{"image": "", "name": "", "price": ""}]},
+    {"name": "Italian Dishes", "items": [{"image": "", "name": "", "price": ""}]},
+    {"name": "Salads", "items": [{"image": "", "name": "", "price": ""}]},
+    {"name": "Side Orders", "items": [{"image": "", "name": "", "price": "", "small_price": ""}]}
   ]
 }
