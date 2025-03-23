@@ -3,41 +3,41 @@
     {
       "name": "PIZZA",
       "images": [
-        "pizza1.jpg",
-        "pizza2.jpg",
-        "pizza3.jpg",
-        "pizza4.jpg",
-        "pizza5.jpg"
+        "YBaconPizzaa.png",
+        "YMushPepPizza.png",
+        "XSmallPep.png",
+        "XSteakFries.png",
+        "Xrings.png"
       ]
     },
     {
       "name": "CALZONES",
       "images": [
-        "calzone1.jpg",
-        "calzone2.jpg",
-        "calzone3.jpg",
-        "calzone4.jpg",
-        "calzone5.jpg"
+        "YCalzone.png",
+        "YCalzone.JPEG",
+        "XSteakPep.png",
+        "XSmallSausTomSpin.png",
+        "XSmallSpinache.png"
       ]
     },
     {
       "name": "SUBS",
       "images": [
-        "sub1.jpg",
-        "sub2.jpg",
-        "sub3.jpg",
-        "sub4.jpg",
-        "sub5.jpg"
+        "YBaconSub.png",
+        "YSteakCheeseSub.png",
+        "YCheesBurgerSub.png",
+        "XSteaak.png",
+        "XSteakMushSub.png"
       ]
     },
     {
       "name": "SIDES",
       "images": [
-        "side1.jpg",
-        "side2.jpg",
-        "side3.jpg",
-        "side4.jpg",
-        "side5.jpg"
+        "YMozSticks.png",
+        "YFriesOR.png",
+        "XWingsFries.png",
+        "XSteakPepSalaFries.png",
+        "Xrings.png"
       ]
     }
   ]
