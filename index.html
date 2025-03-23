@@ -11,22 +11,27 @@
             height: 100%;
             font-family: Arial, sans-serif;
             color: #fff;
-            background: url('JimmysHouseOfPizzaBox.png') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #000;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
         }
-        button {
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        button, .call-btn {
             padding: 10px 20px;
             font-size: 1.5em;
             cursor: pointer;
             border: none;
             border-radius: 8px;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(255,255,255,0.1);
             color: #fff;
-            margin-top: 20px;
+            text-decoration: none;
+            text-align: center;
         }
         #menuImage {
             display: none;
@@ -38,31 +43,32 @@
             background: rgba(0,0,0,0.9);
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+            gap: 15px;
             cursor: pointer;
         }
         #menuImage img {
             max-width: 90%;
-            max-height: 90%;
+            max-height: 80%;
             border-radius: 8px;
         }
 
         @media (max-width: 768px) {
-            body, html {
-                background-attachment: scroll;
-                background-size: contain;
-            }
-            button {
+            button, .call-btn {
                 font-size: 1.2em;
                 padding: 8px 16px;
-                margin-top: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <button onclick="showMenu()">View Menu 🍕</button>
+    <div class="button-container">
+        <button onclick="showMenu()">View Menu 🍕</button>
+        <a class="call-btn" href="tel:6036693310">Call Now 📞</a>
+    </div>
     <div id="menuImage" onclick="hideMenu()">
         <img src="Screenshot 2025-03-22 191817.png" alt="Jimmy's House of Pizza Menu">
+        <a class="call-btn" href="tel:6036693310">Call Now 📞</a>
     </div>
 
     <script>
