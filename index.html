@@ -171,6 +171,7 @@ fetch('menu.json')
   });
 
 function loadCategory(categoryName) {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   document.getElementById('menu').innerHTML = '';
   const category = menuData.categories.find(cat => cat.name.toUpperCase() === categoryName.toUpperCase());
   const menu = document.getElementById('menu');
@@ -219,6 +220,7 @@ function loadCategory(categoryName) {
 
   menu.appendChild(imageGrid);
 }
+
 function showMenu() {
   document.getElementById('menu').innerHTML = `
     <div class="menu-image">
