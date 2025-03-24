@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jimmy's House of Pizza</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body, html {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
       background-color: #000;
       color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       width: 100%;
+      overflow-x: hidden;
     }
+
     .header-container {
       display: flex;
       justify-content: space-between;
@@ -23,17 +26,23 @@
       width: 100%;
       padding: 10px 20px;
       box-sizing: border-box;
+      flex-wrap: wrap;
     }
+
     .header {
       color: red;
       font-size: 2em;
-      text-align: center;
       flex-grow: 1;
+      text-align: center;
     }
+
     .header-buttons {
       display: flex;
       gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
+
     .call-btn, .menu-btn {
       padding: 8px 15px;
       font-size: 1.1em;
@@ -45,6 +54,7 @@
       text-decoration: none;
       white-space: nowrap;
     }
+
     .button-container {
       display: flex;
       flex-wrap: wrap;
@@ -58,6 +68,7 @@
       z-index: 1000;
       border-bottom: 1px solid #333;
     }
+
     button {
       padding: 8px 15px;
       font-size: 1.1em;
@@ -67,30 +78,35 @@
       background-color: rgba(255,255,255,0.1);
       color: #fff;
     }
+
     .category, .menu-image {
       text-align: center;
       margin-top: 20px;
     }
+
     .menu-image img {
-      max-width: 90%;
+      max-width: 100%;
       height: auto;
       border-radius: 8px;
     }
+
     .image-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 15px;
       width: 100%;
       max-width: 1200px;
-      padding: 0 10px;
-      margin-bottom: 50px;
-      box-sizing: border-box;
+      padding: 10px;
+      margin: auto;
     }
+
     .image-item {
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
     }
+
     .image-grid img {
       width: 100%;
       height: 120px;
@@ -99,23 +115,31 @@
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .image-grid img:hover {
       transform: scale(1.1);
       box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
       z-index: 1;
     }
+
     .image-item .name, .image-item .price {
       margin-top: 5px;
       font-size: 0.9em;
       text-align: center;
     }
+
     .price {
       color: #0f0;
     }
+
     @media (max-width: 768px) {
       button, .call-btn, .menu-btn {
         font-size: 1em;
         padding: 8px 12px;
+      }
+
+      .image-grid img {
+        height: 100px;
       }
     }
   </style>
