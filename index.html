@@ -1,182 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jimmy's House of Pizza</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 10px 20px;
-            box-sizing: border-box;
-        }
-        .header {
-            color: red;
-            font-size: 2em;
-            text-align: center;
-            flex-grow: 1;
-        }
-        .header-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        .call-btn, .menu-btn {
-            padding: 8px 15px;
-            font-size: 1.1em;
-            cursor: pointer;
-            border: none;
-            border-radius: 8px;
-            background-color: rgba(255,255,255,0.1);
-            color: #fff;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-        .button-container {
-            display: flex;
-            gap: 10px;
-            margin: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        button {
-            padding: 8px 15px;
-            font-size: 1.1em;
-            cursor: pointer;
-            border: none;
-            border-radius: 8px;
-            background-color: rgba(255,255,255,0.1);
-            color: #fff;
-        }
-        .category, .menu-image {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .menu-image img {
-            max-width: 90%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 15px;
-            width: 90%;
-            max-width: 1200px;
-            margin-bottom: 50px;
-        }
-        .image-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .image-grid img {
-            width: 100%;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .image-grid img:hover {
-            transform: scale(1.4);
-            z-index: 10;
-            position: relative;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.8);
-        }
-        .image-item .name, .image-item .price {
-            margin-top: 5px;
-            font-size: 0.9em;
-        }
-        @media (max-width: 768px) {
-            button, .call-btn, .menu-btn {
-                font-size: 1em;
-                padding: 8px 12px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jimmy's House of Pizza</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px 20px;
+      box-sizing: border-box;
+    }
+    .header {
+      color: red;
+      font-size: 2em;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .call-btn, .menu-btn {
+      padding: 8px 15px;
+      font-size: 1.1em;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background-color: rgba(255,255,255,0.1);
+      color: #fff;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .button-container {
+      display: flex;
+      gap: 10px;
+      margin: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    button {
+      padding: 8px 15px;
+      font-size: 1.1em;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background-color: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+    .category, .menu-image {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .menu-image img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+      width: 90%;
+      max-width: 1200px;
+      margin-bottom: 50px;
+    }
+    .image-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .image-grid img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .image-grid img:hover {
+      transform: scale(1.4);
+      z-index: 10;
+      position: relative;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.8);
+    }
+    .image-item .name, .image-item .price {
+      margin-top: 5px;
+      font-size: 0.9em;
+      text-align: center;
+    }
+    .price {
+      color: #0f0;
+    }
+    @media (max-width: 768px) {
+      button, .call-btn, .menu-btn {
+        font-size: 1em;
+        padding: 8px 12px;
+      }
+    }
+  </style>
 </head>
 <body>
+
 <div class="header-container">
-    <div class="header">Jimmy's House of Pizza</div>
-    <div class="header-buttons">
-        <a class="call-btn" href="tel:6036693310">Call Now 📞</a>
-        <button class="menu-btn" onclick="showMenu()">View Menu 📖</button>
-    </div>
+  <div class="header">Jimmy's House of Pizza</div>
+  <div class="header-buttons">
+    <a class="call-btn" href="tel:6036693310">Call Now 📞</a>
+    <button class="menu-btn" onclick="showMenu()">View Menu 📖</button>
+  </div>
 </div>
 
 <div class="button-container">
-    <button onclick="loadCategory('Pizzas')">Pizzas 🍕</button>
-    <button onclick="loadCategory('Calzones')">Calzones 🥟</button>
-    <button onclick="loadCategory('Hot or Cold Grinders')">Hot or Cold Grinders 🥪</button>
-    <button onclick="loadCategory('Steak Grinders')">Steak Grinders 🥩</button>
-    <button onclick="loadCategory('Italian Dishes')">Italian Dishes 🍝</button>
-    <button onclick="loadCategory('Dinners')">Dinners 🍽️</button>
-    <button onclick="loadCategory('Salads')">Salads 🥗</button>
-    <button onclick="loadCategory('Side Orders')">Side Orders 🍟</button>
+  <button onclick="loadCategory('Pizzas')">Pizzas 🍕</button>
+  <button onclick="loadCategory('Calzones')">Calzones 🥟</button>
+  <button onclick="loadCategory('Hot or Cold Grinders')">Hot or Cold Grinders 🥪</button>
+  <button onclick="loadCategory('Steak Grinders')">Steak Grinders 🥩</button>
+  <button onclick="loadCategory('Italian Dishes')">Italian Dishes 🍝</button>
+  <button onclick="loadCategory('Dinners')">Dinners 🍽️</button>
+  <button onclick="loadCategory('Salads')">Salads 🥗</button>
+  <button onclick="loadCategory('Side Orders')">Side Orders 🍟</button>
 </div>
 
 <div id="menu" class="category"></div>
 
 <script>
 let menuData;
+
 fetch('menu.json')
-    .then(response => response.json())
-    .then(data => {
-        menuData = data;
-        loadCategory('Pizzas');
-    });
+  .then(response => response.json())
+  .then(data => {
+    menuData = data;
+    loadCategory('Pizzas');
+  });
 
 function loadCategory(categoryName) {
-    document.getElementById('menu').innerHTML = '';
-    const category = menuData.categories.find(cat => cat.name.toUpperCase() === categoryName.toUpperCase());
-    const menu = document.getElementById('menu');
-    menu.innerHTML = `<h2>${category.name}</h2>`;
+  document.getElementById('menu').innerHTML = '';
+  const category = menuData.categories.find(cat => cat.name.toUpperCase() === categoryName.toUpperCase());
+  const menu = document.getElementById('menu');
+  menu.innerHTML = `<h2>${category.name}</h2>`;
 
-    let imageGrid = document.createElement('div');
-    imageGrid.className = 'image-grid';
+  let imageGrid = document.createElement('div');
+  imageGrid.className = 'image-grid';
 
-    category.items.forEach(item => {
-        if(item.image){
-            let imageItem = document.createElement('div');
-            imageItem.className = 'image-item';
+  category.items.forEach(item => {
+    if (item.image) {
+      let imageItem = document.createElement('div');
+      imageItem.className = 'image-item';
 
-            let img = document.createElement('img');
-            img.src = item.image;
+      let img = document.createElement('img');
+      img.src = item.image;
+      img.alt = item.name;
 
-            let name = document.createElement('div');
-            name.className = 'name';
-            name.textContent = item.name || '';
+      let name = document.createElement('div');
+      name.className = 'name';
+      name.textContent = item.name || '';
 
-            let price = document.createElement('div');
-            price.className = 'price';
-            price.textContent = item.price ? `$${item.price}` : '';
+      let price = document.createElement('div');
+      price.className = 'price';
 
-            imageItem.appendChild(img);
-            imageItem.appendChild(name);
-            imageItem.appendChild(price);
+      if (item.large_price || item.regular_price) {
+        price.innerHTML = `
+          ${item.large_price ? 'Lg: $' + item.large_price + '<br>' : ''}
+          ${item.regular_price ? 'Reg: $' + item.regular_price : ''}
+        `;
+      } else if (item.price || item.small_price) {
+        price.innerHTML = `
+          ${item.price ? '$' + item.price + '<br>' : ''}
+          ${item.small_price ? 'Sm: $' + item.small_price : ''}
+        `;
+      } else {
+        price.textContent = '';
+      }
 
-            imageGrid.appendChild(imageItem);
-        }
-    });
-    menu.appendChild(imageGrid);
+      imageItem.appendChild(img);
+      imageItem.appendChild(name);
+      imageItem.appendChild(price);
+
+      imageGrid.appendChild(imageItem);
+    }
+  });
+
+  menu.appendChild(imageGrid);
 }
 
 function showMenu() {
-    document.getElementById('menu').innerHTML = `<div class="menu-image"><img src="Screenshot 2025-03-22 191817.png" alt="Menu"></div>`;
+  document.getElementById('menu').innerHTML = `
+    <div class="menu-image">
+      <img src="Screenshot 2025-03-22 191817.png" alt="Menu">
+    </div>`;
 }
 </script>
 
