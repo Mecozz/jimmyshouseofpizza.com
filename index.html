@@ -18,6 +18,15 @@
       width: 100%;
       overflow-x: hidden;
     }
+
+    .sticky-top {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #000;
+      border-bottom: 1px solid #333;
+    }
+
     .header-container {
       display: flex;
       justify-content: space-between;
@@ -25,13 +34,8 @@
       flex-wrap: wrap;
       width: 100%;
       padding: 10px 20px;
-      box-sizing: border-box;
-      position: sticky;
-      top: 0;
-      z-index: 1001;
-      background-color: #000;
-      border-bottom: 1px solid #333;
     }
+
     .header {
       color: red;
       font-size: 2em;
@@ -63,13 +67,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      margin: 0;
       padding: 10px;
-      background-color: #111;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #333;
     }
 
     button {
@@ -149,23 +147,25 @@
 </head>
 <body>
 
-<div class="header-container">
-  <div class="header">Jimmy's House of Pizza</div>
-  <div class="header-buttons">
-    <a class="call-btn" href="tel:6036693310">Call Now 📞</a>
-    <button class="menu-btn" onclick="showMenu()">View Menu 📖</button>
+<div class="sticky-top">
+  <div class="header-container">
+    <div class="header">Jimmy's House of Pizza</div>
+    <div class="header-buttons">
+      <a class="call-btn" href="tel:6036693310">Call Now 📞</a>
+      <button class="menu-btn" onclick="showMenu()">View Menu 📖</button>
+    </div>
   </div>
-</div>
 
-<div class="button-container">
-  <button onclick="loadCategory('Pizzas')">Pizzas 🍕</button>
-  <button onclick="loadCategory('Calzones')">Calzones 🥟</button>
-  <button onclick="loadCategory('Hot or Cold Grinders')">Hot or Cold Grinders 🥪</button>
-  <button onclick="loadCategory('Steak Grinders')">Steak Grinders 🥩</button>
-  <button onclick="loadCategory('Italian Dishes')">Italian Dishes 🍝</button>
-  <button onclick="loadCategory('Dinners')">Dinners 🍽️</button>
-  <button onclick="loadCategory('Salads')">Salads 🥗</button>
-  <button onclick="loadCategory('Side Orders')">Side Orders 🍟</button>
+  <div class="button-container">
+    <button onclick="loadCategory('Pizzas')">Pizzas 🍕</button>
+    <button onclick="loadCategory('Calzones')">Calzones 🥟</button>
+    <button onclick="loadCategory('Hot or Cold Grinders')">Hot or Cold Grinders 🥪</button>
+    <button onclick="loadCategory('Steak Grinders')">Steak Grinders 🥩</button>
+    <button onclick="loadCategory('Italian Dishes')">Italian Dishes 🍝</button>
+    <button onclick="loadCategory('Dinners')">Dinners 🍽️</button>
+    <button onclick="loadCategory('Salads')">Salads 🥗</button>
+    <button onclick="loadCategory('Side Orders')">Side Orders 🍟</button>
+  </div>
 </div>
 
 <div id="menu" class="category"></div>
