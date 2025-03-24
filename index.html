@@ -30,7 +30,11 @@
             text-align: center;
             flex-grow: 1;
         }
-        .call-btn {
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .call-btn, .menu-btn {
             padding: 8px 15px;
             font-size: 1.1em;
             cursor: pointer;
@@ -57,9 +61,14 @@
             background-color: rgba(255,255,255,0.1);
             color: #fff;
         }
-        .category {
+        .category, .menu-image {
             text-align: center;
             margin-top: 20px;
+        }
+        .menu-image img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 8px;
         }
         .image-grid {
             display: grid;
@@ -93,7 +102,7 @@
             font-size: 0.9em;
         }
         @media (max-width: 768px) {
-            button, .call-btn {
+            button, .call-btn, .menu-btn {
                 font-size: 1em;
                 padding: 8px 12px;
             }
@@ -103,7 +112,10 @@
 <body>
 <div class="header-container">
     <div class="header">Jimmy's House of Pizza</div>
-    <a class="call-btn" href="tel:6036693310">Call Now 📞</a>
+    <div class="header-buttons">
+        <a class="call-btn" href="tel:6036693310">Call Now 📞</a>
+        <button class="menu-btn" onclick="showMenu()">View Menu 📖</button>
+    </div>
 </div>
 
 <div class="button-container">
@@ -129,6 +141,7 @@ fetch('menu.json')
     });
 
 function loadCategory(categoryName) {
+    document.getElementById('menu').innerHTML = '';
     const category = menuData.categories.find(cat => cat.name.toUpperCase() === categoryName.toUpperCase());
     const menu = document.getElementById('menu');
     menu.innerHTML = `<h2>${category.name}</h2>`;
@@ -150,13 +163,7 @@ function loadCategory(categoryName) {
 
             let price = document.createElement('div');
             price.className = 'price';
-            if (item.large_price && item.regular_price) {
-                price.textContent = `Large: $${item.large_price} | Regular: $${item.regular_price}`;
-            } else if(item.small_price && item.price){
-                price.textContent = `Small: $${item.small_price} | Regular: $${item.price}`;
-            } else {
-                price.textContent = item.price ? `$${item.price}` : '';
-            }
+            price.textContent = item.price ? `$${item.price}` : '';
 
             imageItem.appendChild(img);
             imageItem.appendChild(name);
@@ -165,8 +172,11 @@ function loadCategory(categoryName) {
             imageGrid.appendChild(imageItem);
         }
     });
-
     menu.appendChild(imageGrid);
+}
+
+function showMenu() {
+    document.getElementById('menu').innerHTML = `<div class="menu-image"><img src="Screenshot 2025-03-22 191817.png" alt="Menu"></div>`;
 }
 </script>
 
