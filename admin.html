@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu Editor - Jimmy's House of Pizza</title>
+  <title>Firebase Menu Editor - Jimmy's House of Pizza</title>
   <style>
     body {
       background-color: #000;
@@ -13,9 +13,6 @@
     }
     h1 {
       margin-bottom: 10px;
-    }
-    p {
-      font-size: 1em;
     }
     textarea {
       width: 100%;
@@ -45,35 +42,64 @@
   </style>
 </head>
 <body>
-  <h1>Menu Editor</h1>
-  <p>Edit your menu JSON below. Once you're done, click "Copy JSON to Clipboard" and update your repository manually.</p>
+  <h1>Firebase Menu Editor</h1>
+  <p>Edit your menu JSON below. Click "Load Menu" to retrieve the data from Firestore, then make your changes and click "Save Changes" to update the database.</p>
   <textarea id="menuEditor" placeholder="Menu JSON will load here..."></textarea>
   <br />
   <button id="loadBtn">Load Menu</button>
-  <button id="copyBtn">Copy JSON to Clipboard</button>
+  <button id="saveBtn">Save Changes</button>
 
-  <script>
+  <!-- Import Firebase libraries (using Firebase v9 modular syntax) -->
+  <script type="module">
+    // Import Firebase modules from CDN
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+    // TODO: Replace these with your Firebase project configuration
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_STORAGE_BUCKET",
+      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+
+    // Initialize Firebase and Firestore
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // References to HTML elements
     const menuEditor = document.getElementById('menuEditor');
     const loadBtn = document.getElementById('loadBtn');
-    const copyBtn = document.getElementById('copyBtn');
+    const saveBtn = document.getElementById('saveBtn');
 
-    // Load menu.json content into the editor
-    loadBtn.addEventListener('click', () => {
-      fetch('menu.json')
-        .then(response => response.json())
-        .then(data => {
-          menuEditor.value = JSON.stringify(data, null, 2);
-        })
-        .catch(error => {
-          alert('Error loading menu.json: ' + error);
-        });
+    // Define the document reference in Firestore (e.g., collection "data", document "menu")
+    const menuDocRef = doc(db, "data", "menu");
+
+    // Load menu data from Firestore into the editor
+    loadBtn.addEventListener('click', async () => {
+      try {
+        const docSnap = await getDoc(menuDocRef);
+        if (docSnap.exists()) {
+          menuEditor.value = JSON.stringify(docSnap.data(), null, 2);
+        } else {
+          alert("No menu data found in Firestore.");
+        }
+      } catch (error) {
+        alert("Error loading menu data: " + error);
+      }
     });
 
-    // Copy the content of the editor to the clipboard
-    copyBtn.addEventListener('click', () => {
-      menuEditor.select();
-      document.execCommand('copy');
-      alert('Menu JSON copied to clipboard. Paste it into your repository to update.');
+    // Save the updated menu data back to Firestore
+    saveBtn.addEventListener('click', async () => {
+      try {
+        const newData = JSON.parse(menuEditor.value);
+        await setDoc(menuDocRef, newData);
+        alert("Menu data saved successfully!");
+      } catch (error) {
+        alert("Error saving menu data: " + error);
+      }
     });
   </script>
 </body>
