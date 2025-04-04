@@ -7,7 +7,7 @@
         {"image": "pizza2.png", "name": "Onions", "large_price": "15.00", "regular_price": "11.00"},
         {"image": "pizza3.png", "name": "Peppers", "large_price": "15.00", "regular_price": "11.00"},
         {"image": "pizza4.png", "name": "Hamburg", "large_price": "15.00", "regular_price": "11.00"},
-        {"image": "pizza5.png", "name": "Pepperoni", "large_price": "15.00", "regular_price": "11.00"},
+        {"image": "pizza4.png", "name": "Pepperoni", "large_price": "15.00", "regular_price": "11.00"},
         {"image": "pizza6.png", "name": "Ham", "large_price": "15.00", "regular_price": "11.00"},
         {"image": "pizza7.png", "name": "Mushroom", "large_price": "15.00", "regular_price": "11.00"},
         {"image": "pizza8.png", "name": "Sausage", "large_price": "15.00", "regular_price": "11.00"},
