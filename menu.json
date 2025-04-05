@@ -93,7 +93,7 @@
       "name": "Italian Dishes",
       "items": [
         {"image": "italian1.png", "name": "Spag. & Sauce", "price": "10.00"},
-        {"image": "italian2.png", "name": "w/Meatballs", "price": "11.75"},
+        {"image": "italian1.png", "name": "w/Meatballs", "price": "11.75"},
         {"image": "italian3.png", "name": "w/Sausage", "price": "11.75"},
         {"image": "italian4.png", "name": "--Combo--", "price": "12.75"},
         {"image": "italian5.png", "name": "w/Chicken or Veal", "price": "11.75"}
