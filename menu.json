@@ -45,12 +45,12 @@
     {
       "name": "Hot or Cold Grinders",
       "items": [
-        {"image": "grinder1.png", "name": "Meatballs", "large_price": "13.00", "regular_price": "11.00"},
+        {"image": "grinder2.png", "name": "Meatballs", "large_price": "13.00", "regular_price": "11.00"},
         {"image": "grinder2.png", "name": "Sausage", "large_price": "13.00", "regular_price": "11.00"},
         {"image": "grinder3.png", "name": "Ham & Cheese", "large_price": "13.00", "regular_price": "11.00"},
         {"image": "grinder4.png", "name": "Salami", "large_price": "13.00", "regular_price": "11.00"},
         {"image": "grinder5.png", "name": "Tuna", "large_price": "13.00", "regular_price": "11.00"},
-        {"image": "grinder6.png", "name": "Cheeseburger", "large_price": "13.00", "regular_price": "11.00"},
+        {"image": "grinder1.png", "name": "Cheeseburger", "large_price": "13.00", "regular_price": "11.00"},
         {"image": "grinder7.png", "name": "B.L.T", "large_price": "13.00", "regular_price": "11.00"},
         {"image": "grinder8.png", "name": "Pastrami", "large_price": "13.00", "regular_price": "11.00"},
         {"image": "grinder9.png", "name": "Gyros", "large_price": "13.75", "regular_price": "11.75"},
